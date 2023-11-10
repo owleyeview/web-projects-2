@@ -8,6 +8,7 @@
 
 let display = document.getElementById("display");
 let buttons = document.querySelectorAll(".buttons button");
+let history = document.getElementById("history");
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
@@ -29,7 +30,7 @@ function processInput(value) {
     // If it's not "=", store the input in the stack
     inputStack.push(value);
     display.value += value;
-  } else {
+  } else if (inputStack.length > 0){
     // Loop through inputStack and combine digits into numbers
     let newStack = [];
     let currentNumber = "";
@@ -53,8 +54,19 @@ function processInput(value) {
     let result = evaluatePostfixExpression(postfix);
     // Display the result and store it for more operations
     display.value = result;
+    
     inputStack = [];
     inputStack.push(result);
+
+    // Add the expression and result to the history
+    let expression = "";
+    for (let i = 0; i < newStack.length; i++) {
+      expression += newStack[i];
+    }
+    let listItem = document.createElement("li");
+    listItem.textContent = `${expression} = ${result}`
+    history.appendChild(listItem);
+
   }
 }
 

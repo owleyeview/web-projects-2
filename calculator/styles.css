@@ -1,19 +1,12 @@
 body {
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
-  font-family: 'Arial', sans-serif;
-}
-
-@font-face {
-    font-family: 'GamePixies';
-    src: url(./fonts/gamepixies-font/Gamepixies-8MO6n.ttf);
-}
-
-@font-face {
-    font-family: 'SF';
-    src: url(./fonts/sf-pixelate-font/SfPixelate-wBgw.ttf);
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e7eb;
 }
 
 @font-face {
@@ -27,12 +20,12 @@ body {
 }
 
 .calculator {
-   
+
     background-color: #e5e7eb;
     width: 100%;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: white;
@@ -43,38 +36,43 @@ h1{
     display: flex;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
     flex: 1;
     padding: .6rem;
     box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
 }
 
 #display {
-    width: 100%;
     height: 4rem;
+    resize: none;
     padding: .6rem;
+    border: .05rem solid #000;
     font-size: 2rem;
     text-align: right;
     margin-bottom: .6rem;
     font-family: 'Times Square', sans-serif;
+
 }
 
 #history {
-    width: 100%;
+    width: 90%;
     height: calc(4rem + 5 *(3rem + .6rem));
     padding: .6rem;
     font-size: 1rem;
     text-align: right;
     overflow-y: scroll;
     margin-bottom: .6rem;
-    border: .1rem solid #ccc;
+    border: .05rem solid #000;
+    font-family: 'Ticketing', sans-serif;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: .6rem;
-    
 }
 
 button {
@@ -86,7 +84,8 @@ button {
     color: white;
 }
 
-button.number, button.decimal {
+button.number,
+button.decimal {
     background-color: #4A6793
 }
 
