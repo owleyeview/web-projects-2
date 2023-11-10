@@ -1,0 +1,119 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #2196f3, #78efe8);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.win-text {
+    color: #fe00b7
+}
+
+.lose-text {
+    color: #DBFEB7;
+}
+
+#choices {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.choice {
+    font-size: 300px;
+    margin: 50px;
+    color: #efefef;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 1190px) {
+    .choice {
+        font-size: 200px;
+        margin: 35px;
+    }
+}
+
+@media (max-width: 800px) {
+    .choice {
+        font-size: 150px;
+        margin: 15px;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    width: 200px;
+    height: 50px;
+    background-color: #fe00b7;
+    border: white 4px solid;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 20px auto;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+button:hover {
+    box-shadow: 1px -1px 8px 3px rgba(255, 255, 255, 0.5);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#score {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    color: white;
+}
+
+.tie-game {
+    background: conic-gradient(from 180deg at 50% 50%, #FE00B7 0deg, #D2FFAF 360deg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}

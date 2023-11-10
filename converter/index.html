@@ -1,0 +1,57 @@
+<!-- 
+Rashaan Lightpool
+Project 1: Currency Converter WebApp
+SD 230 - Professor Stuart, WCC
+10/16/2023
+
+This is a currency converter web app that allows the user to convert between
+currencies and look up currencies.
+I would like to add drop down menus for the currency codes to make it easier
+for the user to input the correct currency code.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    
+</head>
+<body>
+    <h1>Currency Converter</h1>
+
+    <!-- Currency conversion section -->
+    <h2>Convert Currency</h2>
+    <label>
+        Amount:
+        <input type="number" id="amount" placeholder="Enter amount to convert">
+    </label>
+    <br><br>
+    <label>
+        Original Currency Code:
+        <input type="text" id="baseCurrency" placeholder="eg. USD">
+    </label>
+    <br><br>
+    <label>
+        Target Currency Code:
+        <input type="text" id="targetCurrency" placeholder="eg. EUR">
+    </label>
+    <br><br>
+    <button onclick="convertCurrency(document.getElementById('amount').value , document.getElementById('baseCurrency').value , document.getElementById('targetCurrency').value)">Convert</button>
+    <div class="result" id="conversionResult"></div>
+
+    <!-- Currency lookup section -->
+    <h2>Lookup Currency</h2>
+    <label>
+        Query:
+        <input type="text" id="currencyQuery" placeholder="eg. Dollar">
+    </label>
+    <br><br>
+    <button onclick="lookupCurrency(document.getElementById('currencyQuery').value)">Lookup</button>
+    <div class="result" id="lookupResult"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

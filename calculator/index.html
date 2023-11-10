@@ -1,0 +1,61 @@
+<!-- 
+Rashaan Lightpool
+Class Project: Calculator WebApp
+SD 230 - Professor Stuart, WCC
+11/06/2023
+
+This is a calculator web app that will allow the user to input numbers and 
+operators to calculate a result.
+I chose to use buttons instead of keyboard input because it easier to guarantee 
+that the user will only input numbers and operators.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator WebApp</title>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <h1>Retro Calculator</h1>
+      <div class="content">
+        <div class="left-column">
+          <textarea id="display" readonly></textarea>
+          <div class="buttons">
+            <button class="clear">Clear</button>
+            <button class="operator">(</button>
+            <button class="operator">)</button>
+            <button class="operator">/</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">*</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+            <button class="number">0</button>
+            <button class="decimal">.</button>
+            <button class="operator">^</button>
+            <button class="operator">=</button>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="history">
+            <ul id="history" readonly></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

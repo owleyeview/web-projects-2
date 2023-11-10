@@ -1,0 +1,103 @@
+body {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+    display: flex;
+  font-family: 'Arial', sans-serif;
+}
+
+@font-face {
+    font-family: 'GamePixies';
+    src: url(./fonts/gamepixies-font/Gamepixies-8MO6n.ttf);
+}
+
+@font-face {
+    font-family: 'SF';
+    src: url(./fonts/sf-pixelate-font/SfPixelate-wBgw.ttf);
+}
+
+@font-face {
+    font-family: 'Times Square';
+    src: url(./fonts/times-square-font/TimesSquare-m105.ttf);
+}
+
+@font-face {
+    font-family: 'Ticketing';
+    src: url(./fonts/ticketing-font/Ticketing-jJB0.ttf);
+}
+
+.calculator {
+   
+    background-color: #e5e7eb;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    background-color: #3662e3;
+}
+
+.content {
+    display: flex;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: .6rem;
+    box-sizing: border-box;
+}
+
+#display {
+    width: 100%;
+    height: 4rem;
+    padding: .6rem;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: .6rem;
+    font-family: 'Times Square', sans-serif;
+}
+
+#history {
+    width: 100%;
+    height: calc(4rem + 5 *(3rem + .6rem));
+    padding: .6rem;
+    font-size: 1rem;
+    text-align: right;
+    overflow-y: scroll;
+    margin-bottom: .6rem;
+    border: .1rem solid #ccc;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .6rem;
+    
+}
+
+button {
+    height: 3rem;
+    font-size: 1.125rem;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    color: white;
+}
+
+button.number, button.decimal {
+    background-color: #4A6793
+}
+
+button.operator {
+    background-color: #5686cc;
+}
+
+button.clear {
+    background-color: #1d201f;
+}
+
+button:hover {
+    opacity: 0.9;
+}
