@@ -34,12 +34,12 @@ const currencySymbols = {
 function convertCurrency(amount, fromCurrency, toCurrency) {
     // Handle the case where fromCurrency or toCurrency is not in exchangeRates.rates
     if (fromCurrency !== 'USD' && !exchangeRates.rates[fromCurrency]) {
-        document.getElementById("conversionResult").innerHTML = "Invalid source currency code provided.";
+        document.getElementById("conversion-results").innerHTML = "Invalid source currency code provided.";
         return;  // Exit the function early
     }
 
     if (toCurrency !== 'USD' && !exchangeRates.rates[toCurrency]) {
-        document.getElementById("conversionResult").innerHTML = "Invalid target currency code provided.";
+        document.getElementById("conversion-results").innerHTML = "Invalid target currency code provided.";
         return;  // Exit the function early
     }
 
@@ -53,7 +53,7 @@ function convertCurrency(amount, fromCurrency, toCurrency) {
     let convertedAmount = toCurrency === 'USD' ? amountInUSD : amountInUSD * exchangeRates.rates[toCurrency];
     
     // Display the conversion result directly in the div
-    document.getElementById("conversionResult").innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency} (as of ${exchangeRates.date})`;
+    document.getElementById("conversion-results").innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency} (as of ${exchangeRates.date})`;
 }
 
 
@@ -69,9 +69,9 @@ function lookupCurrency(query) {
     }
 
     if (results.length === 0) {
-        document.getElementById("lookupResult").innerHTML = "No matching currency found";
+        document.getElementById("lookup-result").innerHTML = "No matching currency found";
         return;  // Exit the function early
     }
 
-    document.getElementById("lookupResult").innerHTML = results.join(', ');
+    document.getElementById("lookup-result").innerHTML = results.join(', ');
 }

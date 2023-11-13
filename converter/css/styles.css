@@ -1,0 +1,32 @@
+/* CSS Reset */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Style page content */
+html {
+    color: rgb(67, 67, 65);
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
+    font-weight: 400;
+}
+
+body {
+    font: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: rgb(247, 248, 249);
+    display: block; /* or flex? */
+}
+
+header, main, footer {
+    display: grid;
+}
+
+header {
+    color: white;
+    background-color: #0b196c;
+}
