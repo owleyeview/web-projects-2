@@ -52,7 +52,7 @@ for the user to input the correct currency code.
             <div class="input">
               <label for="amount">Amount</label>
               <input
-                type="number"
+                type="text"
                 id="amount"
                 placeholder="Enter amount to convert"
               />
@@ -93,7 +93,7 @@ for the user to input the correct currency code.
           </div>  
           <button
             id="convert-button"
-            onclick="convertCurrency(document.getElementById('amount').value , document.getElementById('base-currency').value , document.getElementById('target-currency').value)"
+            onclick="convertCurrency(document.getElementById('amount').value.substring(1) , document.getElementById('base-currency').value , document.getElementById('target-currency').value)"
           >
             Convert
           </button>

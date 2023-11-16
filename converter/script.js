@@ -29,6 +29,26 @@ const currencies = {
         "ZAR": "South African Rand"
 }
 
+// Event listener for the amount input field
+document.getElementById('amount').addEventListener('input', function(event) {
+    // Remove all non-numeric characters from the input value
+    event.target.value = event.target.value.replace(/[^0-9.]/g, '');
+    // Check for more than one decimal point
+    if ((event.target.value.match(/\./g) || []).length > 1) {
+        event.target.value = event.target.value.slice(0, -1);
+    }
+    // Check for more than two digits after the decimal point
+    if (event.target.value.split('.')[1] && event.target.value.split('.')[1].length > 2) {
+        event.target.value = event.target.value.slice(0, -1);
+    }
+    // Add a dollar sign in front of the input value if it doesn't already have one
+    if (!event.target.value.startsWith('$')) {
+        event.target.value = '$' + event.target.value;
+    }
+    
+
+});
+
 function convertCurrency(amount, fromCurrency, toCurrency) {
     // Handle the case where fromCurrency or toCurrency is not in exchangeRates.rates
     if (fromCurrency !== 'USD' && !exchangeRates.rates[fromCurrency]) {
