@@ -102,6 +102,7 @@ main {
 #conversion-form #swap-button {
 
 }
+
 #conversion-form #convert-button {
     padding: 0.7rem 1.1rem;
     background-color: #116FDD;
@@ -114,7 +115,7 @@ main {
     transition: background-color 0.3s ease;
 }
 
-#conversion-form button:hover {
+#conversion-form #convert-button:hover {
     background-color: #309AFC;
 }
 

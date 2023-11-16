@@ -1,7 +1,7 @@
 // Rashaan Lightpool
 // Class Project: Calculator WebApp
 // SD235 - Professor Stuart, WCC
-// 11/06/2023
+// 11/15/2023
 
 // Based on a vague description of the Shunting Yard algorithm from
 // Data Structures and Algorithm Analysis in Java, 3rd Edition
@@ -20,10 +20,15 @@ buttons.forEach((button) => {
 let inputStack = [];
 
 function processInput(value) {
+  // Handle Clear
   if (value === "Clear") {
     // Clear the display and the stack
     display.value = "";
     inputStack = [];
+    // Add a clear message to the history
+    let clearItem = document.createElement("li");
+    clearItem.textContent = "-----Cleared-----";
+    history.appendChild(clearItem);
     return;
   }
   if (value !== "=") {
