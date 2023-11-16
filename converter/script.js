@@ -15,8 +15,7 @@ const exchangeRates = {
     } 
 }
 
-const currencySymbols = {
-    "symbols": {
+const currencies = {
         "AUD": "Australian Dollar",
         "CAD": "Canadian Dollar",
         "CLP": "Chilean Peso",
@@ -28,7 +27,6 @@ const currencySymbols = {
         "RUB": "Russian Ruble",
         "USD": "United States Dollar",
         "ZAR": "South African Rand"
-    }
 }
 
 function convertCurrency(amount, fromCurrency, toCurrency) {
@@ -62,8 +60,8 @@ function lookupCurrency(query) {
     let results = [];
 
     // search for matching string in currency codes or currency names
-    for (let code in currencySymbols.symbols) {
-        if (code.toLowerCase().includes(query.toLowerCase()) || currencySymbols.symbols[code].toLowerCase().includes(query.toLowerCase())) {
+    for (let code in currencies) {
+        if (code.toLowerCase().includes(query.toLowerCase()) || currencies[code].toLowerCase().includes(query.toLowerCase())) {
             results.push(code);
         }
     }
