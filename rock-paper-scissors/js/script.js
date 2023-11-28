@@ -21,6 +21,7 @@ let gameStarted = false;
 function startGame() {
   gameStarted = true;
   document.getElementById("start-button").innerText = "Play Hand";
+  document.getElementById("subtitle").innerText = "Rock, Paper, Scissors... Shoot!";
   // Turning the hands white and removing the possible tie-game class 
   let choices = document.getElementsByClassName("choice");
   for (let i = 0; i < choices.length; i++) {
